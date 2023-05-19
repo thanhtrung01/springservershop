@@ -1,5 +1,5 @@
 # Sử dụng một hình ảnh cơ sở chứa Java JDK
-FROM openjdk:11-jdk
+FROM openjdk:18-jdk
 
 # Thiết lập thư mục làm việc trong container
 WORKDIR /app
