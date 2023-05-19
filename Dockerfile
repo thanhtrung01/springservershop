@@ -1,5 +1,5 @@
 # Sử dụng một hình ảnh cơ sở chứa Java JDK
-FROM openjdk:18-jdk
+FROM maven:3.8.1-openjdk-18-slim
 
 # Thiết lập thư mục làm việc trong container
 WORKDIR /app
