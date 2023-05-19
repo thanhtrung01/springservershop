@@ -5,13 +5,18 @@ FROM maven:3.8.1-openjdk-17-slim
 WORKDIR /app
 
 # Sao chép file pom.xml vào thư mục làm việc
-COPY . .
+COPY pom.xml .
+
+# Tải các phụ thuộc Maven
+RUN mvn dependency:go-offline
+
+# Sao chép các tệp mã nguồn vào thư mục làm việc
+COPY src ./src
 
 # Sao chép các tệp mã nguồn vào thư mục làm việc
 
 # Biên dịch ứng dụng với Maven
-RUN mvn install
-
+RUN mvn package 
 # Chạy ứng dụng khi container được khởi chạy
 CMD ["java", "-jar", "target/ecommercebackend-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8010
