@@ -10,7 +10,7 @@ COPY . .
 # Sao chép các tệp mã nguồn vào thư mục làm việc
 
 # Biên dịch ứng dụng với Maven
-RUN mvn spring-boot:run
+RUN java -jar target/ecommercebackend-0.0.1-SNAPSHOT.jar
 
 # Chạy ứng dụng khi container được khởi chạy
 CMD ["java", "-jar", "target/ecommercebackend-0.0.1-SNAPSHOT.jar"]
