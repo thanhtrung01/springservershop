@@ -41,10 +41,10 @@ jobs:
         id: docker_build
         with:
           context: ./
-          file: back-end/Dockerfile
+          file: Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/server-webtodo
+          tags: ${{ secrets.DOCKER_USERNAME }}/java-server-shop
           # cache-from: type=local, src=/tmp/.buildx-cache 
           # cache-to: type=local, src=/tmp/.buildx-cache
           
