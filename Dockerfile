@@ -5,10 +5,9 @@ FROM openjdk:18-jdk
 WORKDIR /app
 
 # Sao chép file pom.xml vào thư mục làm việc
-COPY pom.xml .
+COPY . .
 
 # Sao chép các tệp mã nguồn vào thư mục làm việc
-COPY src ./src
 
 # Biên dịch ứng dụng với Maven
 RUN mvn package
