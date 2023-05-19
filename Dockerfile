@@ -17,7 +17,6 @@ COPY src ./src
 
 # Biên dịch ứng dụng với Maven
 RUN mvn compile 
-RUN mvn package 
 RUN mvn test 
 # Chạy ứng dụng khi container được khởi chạy
 CMD ["java", "-jar", "target/ecommercebackend-0.0.1-SNAPSHOT.jar"]
