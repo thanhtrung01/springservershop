@@ -45,8 +45,8 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/java-server-shop
-          # cache-from: type=local, src=/tmp/.buildx-cache 
-          # cache-to: type=local, src=/tmp/.buildx-cache
+          cache-from: type=local, src=/tmp/.buildx-cache 
+          cache-to: type=local, src=/tmp/.buildx-cache
           
           
       - name: Verify

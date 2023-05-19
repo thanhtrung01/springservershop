@@ -11,8 +11,8 @@ COPY pom.xml .
 COPY src ./src
 
 # Biên dịch ứng dụng với Maven
-RUN ./mvnw package -DskipTests
+RUN mvn package
 
 # Chạy ứng dụng khi container được khởi chạy
-CMD ["java", "-jar", "target/ecommercebackend.jar"]
+CMD ["java", "-jar", "target/ecommercebackend-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8010
