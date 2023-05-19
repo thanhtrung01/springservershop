@@ -1,0 +1,13 @@
+version: '3'
+services:
+  database:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_USER: thanhtrung
+      MYSQL_ROOT_PASSWORD: trungtn001
+      MYSQL_DATABASE: web_maven_shop
+      MYSQL_USER: thanhtrung
+      MYSQL_PASSWORD: trungtn001
+      MYSQL_ROOT_HOST: 127.0.0.1
